@@ -44,14 +44,14 @@ $animals = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <label>キーワード:</label>
         <input type="text" name="comment" placeholder="キーワードの入力">
         <input type="submit" name="submit" value="検索">
-        <br><br>
     </form>
         
     <?php foreach ($animals as $animal) :?>
         <?= $animal['type'] . 'の' . $animal['classifcation'] . 'ちゃん' ?><br>
         <?= $animal['description'] ?><br> 
         <?= $animal['birthday'] . '生まれ' ?><br> 
-        <?= '出身地' . $animal['birthplace'] ?><hr>
+        <?= '出身地' . $animal['birthplace'] ?>
+        <hr>
     <?php endforeach; ?>
 </body>
 </html>
